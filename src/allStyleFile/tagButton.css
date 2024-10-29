@@ -1,0 +1,38 @@
+.tabButton {
+    display: flex; /* Flex layout for button content */
+    align-items: center; /* Center items vertically */
+    padding: 0.5rem; /* Padding for the button */
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove outline */
+    transition: color 0.3s; /* Smooth transition for text color */
+  }
+  
+  .tabButton:focus {
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 0 2px #60fdfb; /* Ring effect */
+  }
+  
+  .text {
+    margin-right: 0.75rem; /* Space between text and indicator */
+    font-weight: 600; /* Bold font weight */
+    transition: color 0.3s; /* Smooth transition for text color */
+  }
+  
+  .default {
+    color: #ADB7BE; /* Default text color */
+  }
+  
+  .active {
+    color: white; /* Active text color */
+  }
+  
+  .indicator {
+    height: 0.25rem; /* Height of the indicator */
+    background-color: #60fdfb; /* Indicator color */
+    margin-top: 0.5rem; /* Space above the indicator */
+    margin-right: 0.75rem; /* Space to the right of the indicator */
+    transition: width 0.3s; /* Smooth transition for width */
+  }
+  

@@ -3,6 +3,7 @@ import React, { useState, ChangeEvent, FormEvent, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { init, send } from "@emailjs/browser";
+import "@/allStyleFile/email.css";  
 
 // Initialize EmailJS
 init("o_PDiDd2_SLFdj6JN");
@@ -56,27 +57,26 @@ const EmailSection = () => {
   }, [isSent]);
 
   return (
-    <section id="contact" className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
-      <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md">
+    <section id="contact" className="email-section">
+      <div className="email-header">
+        <h5 className="email-title">Let&apos;s Connect</h5>
+        <p className="email-description">
           I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
         </p>
-        <div className="socials flex flex-row gap-2">
+        <div className="social-icons">
           <Link href="https://github.com/Taha258" target="_blank">
             <Image src="/github-icon.svg" alt="Github Icon" width={24} height={24} />
           </Link>
           <Link href="https://www.linkedin.com/in/taha-hussain-8a0732284/" target="_blank">
             <Image src="/linkedin-icon.svg" alt="Linkedin Icon" width={24} height={24} />
           </Link>
-          <br />
-          <h2 className="mt-3 text-white">Contact: 0346-2973219</h2>
+          <h2 className="contact-info">Contact: 0346-2973219</h2>
         </div>
       </div>
       <div>
-        <form className="flex flex-col" onSubmit={handleSubmit}>
-          <div className="mb-6">
-            <label htmlFor="name" className="text-white block text-sm mb-2 font-medium">Name</label>
+        <form className="email-form" onSubmit={handleSubmit}>
+          <div className="form-field">
+            <label htmlFor="name" className="form-label">Name</label>
             <input
               name="name"
               type="text"
@@ -84,12 +84,12 @@ const EmailSection = () => {
               required
               value={formData.name}
               onChange={handleChange}
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="form-input"
               placeholder="Name"
             />
           </div>
-          <div className="mb-6">
-            <label htmlFor="email" className="text-white block mb-2 text-sm font-medium">Your email</label>
+          <div className="form-field">
+            <label htmlFor="email" className="form-label">Your email</label>
             <input
               name="email"
               type="email"
@@ -97,32 +97,32 @@ const EmailSection = () => {
               required
               value={formData.email}
               onChange={handleChange}
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="form-input"
               placeholder="abc@google.com"
             />
           </div>
-          <div className="mb-6">
-            <label htmlFor="message" className="text-white block text-sm mb-2 font-medium">Message</label>
+          <div className="form-field">
+            <label htmlFor="message" className="form-label">Message</label>
             <textarea
               name="message"
               id="message"
               required
               value={formData.message}
               onChange={handleChange}
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="form-textarea"
               placeholder="Let's talk about..."
             />
           </div>
           <button
             type="submit"
-            disabled={isLoading} // Disable button while loading
-            className={`bg-[#1066c7] hover:bg-[#27405d] text-white font-medium py-2.5 px-5 rounded-lg w-full ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+            disabled={isLoading}
+            className={`submit-button ${isLoading ? 'disabled' : ''}`}
           >
             {isLoading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
-        {isSent && <p className="text-green-500 mt-4">Message sent successfully!</p>}
-        {error && <p className="text-red-500 mt-4">{error}</p>}
+        {isSent && <p className="success-message">Message sent successfully!</p>}
+        {error && <p className="error-message">{error}</p>}
       </div>
     </section>
   );

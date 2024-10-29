@@ -5,7 +5,7 @@ declare module "react-animated-numbers" {
   interface Config {
     mass: number;
     friction: number;
-    tension: number; // tension ka spelling theek kar diya
+    tension: number; 
   }
 
   interface AnimatedNumbersProps {
@@ -13,7 +13,7 @@ declare module "react-animated-numbers" {
     includeComma?: boolean;
     locale?: string;
     className?: string;
-    configs?: (value: number, index: number) => Config; // Config type use karein
+    configs?: (value: number, index: number) => Config; 
   }
 
   const AnimatedNumbers: React.FC<AnimatedNumbersProps>;

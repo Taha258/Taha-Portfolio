@@ -1,0 +1,23 @@
+/* NavLink Styling */
+.nav-link {
+    display: block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 1rem;
+    color: #adb7be;
+    font-size: 1.25rem; /* sm:text-xl equivalent */
+    border-radius: 0.375rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: white;
+  }
+  
+  @media (min-width: 768px) {
+    .nav-link {
+      padding: 0; /* md:p-0 equivalent */
+    }
+  }
+  

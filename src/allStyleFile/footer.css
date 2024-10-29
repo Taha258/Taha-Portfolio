@@ -1,0 +1,28 @@
+.footer {
+    border-top: 1px solid #33353F;
+    border-left: transparent;
+    border-right: transparent;
+    color: white;
+    padding: 20px 0; /* Height increase ke liye padding */
+    
+  }
+  
+  .footer-container {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-logo {
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .footer-text {
+    color: #64748b;
+    
+  }
+  

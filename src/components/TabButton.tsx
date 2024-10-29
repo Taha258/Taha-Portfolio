@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import "@/allStyleFile/tagButton.css"; 
 
-// Define the props interface
+
 interface TabButtonProps {
-  active: boolean; // Indicates if the tab is active
-  selectTab: () => void; // Function to select the tab
-  children: React.ReactNode; // Children can be any React node
+  active: boolean; 
+  selectTab: () => void; 
+  children: React.ReactNode; 
 }
 
 const variants = {
@@ -14,21 +15,19 @@ const variants = {
 };
 
 const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
-
   return (
     <button
       onClick={selectTab}
-      aria-pressed={active} // Accessibility improvement
-      className="focus:outline-none focus:ring-2 focus:ring-[#60fdfb]" // Add focus styles
+      aria-pressed={active} 
+      className="tabButton"
     >
-      <span className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+      <span className={`text ${active ? "active" : "default"}`}>
         {children}
       </span>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-[#60fdfb] mt-2 mr-3"
+        className="indicator"
       />
     </button>
   );

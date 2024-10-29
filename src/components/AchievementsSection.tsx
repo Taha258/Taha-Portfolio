@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import "../allStyleFile/achievements.css"
 
 // Dynamically import the AnimatedNumbers component
 const AnimatedNumbers = dynamic(
@@ -35,29 +36,26 @@ const achievementsList = [
 // AchievementsSection component
 const AchievementsSection = () => {
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-      <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
+    <div className="achievements-section">
+      <div className="achievements-container">
         {achievementsList.map((achievement, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-          >
-            <h2 className="text-white text-4xl font-bold flex flex-row">
+          <div key={index} className="achievement-item">
+            <h2 className="achievement-value">
               {achievement.prefix ? achievement.prefix : null}
               <AnimatedNumbers
                 includeComma
-                animateToNumber={parseInt(achievement.value.replace(/,/g, ""))} // Replace commas before parsing
+                animateToNumber={parseInt(achievement.value.replace(/,/g, ""))}
                 locale="en-US"
-                className="text-white text-4xl font-bold"
+                className="achievement-value"
                 configs={(_, index) => ({
                   mass: 1,
                   friction: 100,
-                  tension: 140 * (index + 1), // Corrected 'tension'
+                  tension: 140 * (index + 1),
                 })}
               />
               {achievement.postfix}
             </h2>
-            <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+            <p className="achievement-metric">{achievement.metric}</p>
           </div>
         ))}
       </div>

@@ -1,22 +1,19 @@
 import React from "react";
+import "@/allStyleFile/projectTag.css";
 
 // Define the types for the props
 interface ProjectTagProps {
-  name: string; // name of the tag
-  onClick: (name: string) => void; // function to handle click event
-  isSelected: boolean; // boolean to determine if the tag is selected
+  name: string; 
+  onClick: (name: string) => void; 
+  isSelected: boolean; 
 }
 
 const ProjectTag: React.FC<ProjectTagProps> = ({ name, onClick, isSelected }) => {
-  const buttonStyles = isSelected
-    ? "text-white border-primary-500"
-    : "text-[#ADB7BE] border-slate-600 hover:border-white";
-
   return (
     <button
-      className={`${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+      className={`tagButton ${isSelected ? "selected" : "default"}`} 
       onClick={() => onClick(name)}
-      aria-pressed={isSelected} // Accessibility improvement
+      aria-pressed={isSelected} 
     >
       {name}
     </button>

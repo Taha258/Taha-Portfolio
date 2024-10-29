@@ -1,0 +1,36 @@
+#projects {
+    text-align: center; /* Center the text */
+  }
+  
+  h2 {
+    font-size: 2.25rem; /* Tailwind: text-4xl */
+    font-weight: bold; /* Tailwind: font-bold */
+    color: white; /* Tailwind: text-white */
+    margin-top: 1rem; /* Tailwind: mt-4 */
+    margin-bottom: 2rem; /* Tailwind: mb-8 */
+  }
+  
+  /* Button styles for ProjectTag */
+  .project-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* Tailwind: gap-2 */
+    padding: 1.5rem 0; /* Tailwind: py-6 */
+    color: white; /* Tailwind: text-white */
+  }
+  
+  /* Grid styles for project cards */
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 2rem; /* Tailwind: gap-8 */
+  }
+  
+  /* Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .project-list {
+      grid-template-columns: 1fr; /* 1 column layout for mobile */
+    }
+  }
+  

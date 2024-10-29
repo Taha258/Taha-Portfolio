@@ -1,0 +1,59 @@
+
+.about-section {
+    color: white;
+    padding: 2rem 1rem;
+  }
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr 1fr;
+      padding: 4rem;
+    }
+  }
+
+  .space{
+    margin-bottom: 10px;
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .about-content {
+    margin-top: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .tabs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin-top: 2rem;
+  }
+  
+  .tab-content {
+    margin-top: 2rem;
+  }
+  

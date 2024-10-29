@@ -1,0 +1,24 @@
+.tagButton {
+    border-radius: 9999px; /* Full rounded button */
+    border: 2px solid #ADB7BE; /* Default border color */
+    padding: 1rem 1.5rem; /* Padding for the button */
+    font-size: 1.25rem; /* Text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+  }
+  
+  .tagButton:hover {
+    border-color: white; /* Change border color on hover */
+  }
+  
+  .selected {
+    color: white; /* Text color when selected */
+    border-color: #fff; /* Change border color when selected */
+    background-color: #121212;
+  }
+  
+  .default {
+    color: #ADB7BE; /* Default text color */
+    background-color: #121212;
+  }
+  

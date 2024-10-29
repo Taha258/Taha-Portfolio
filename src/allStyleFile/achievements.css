@@ -1,0 +1,42 @@
+/* Achievements Section ke liye Styles */
+.achievements-section {
+    padding: 2rem 1rem;
+  }
+  
+  .achievements-container {
+    border: 1px solid #33353F;
+    border-radius: 0.5rem;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 640px) {
+    .achievements-container {
+      flex-direction: row;
+    }
+  }
+  
+  .achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  .achievement-value {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .achievement-metric {
+    color: #ADB7BE;
+    font-size: 1rem;
+  }
+  

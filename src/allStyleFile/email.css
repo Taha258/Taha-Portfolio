@@ -1,0 +1,120 @@
+/* Container for the email section */
+.email-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 3rem 1rem;
+    position: relative;
+    /* background-color: #18191E; */
+  }
+  
+  @media (min-width: 768px) {
+    .email-section {
+      grid-template-columns: 1fr 1fr;
+      margin: 3rem 0;
+    }
+  }
+  
+  /* Header section */
+  .email-header {
+    z-index: 10;
+  }
+  
+  .email-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .email-description {
+    color: #ADB7BE;
+    margin-bottom: 1rem;
+    max-width: 24rem;
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .contact-info {
+    margin-top: 0.75rem;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* Form section */
+  .email-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 0.625rem;
+    border-radius: 0.5rem;
+    background-color: #18191E;
+    color: #FFFFFF;
+    border: 1px solid #33353F;
+    font-size: 0.875rem;
+  }
+  
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    color: #9CA2A9;
+  }
+  
+  .form-textarea {
+    resize: vertical;
+    min-height: 6.25rem;
+  }
+  
+  /* Button styling */
+  .submit-button {
+    background-color: #1066c7;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+  
+  .submit-button:hover {
+    background-color: #27405d;
+  }
+  
+  .submit-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Messages */
+  .success-message {
+    color: #28a745;
+    margin-top: 1rem;
+  }
+  
+  .error-message {
+    color: #e63946;
+    margin-top: 1rem;
+  }
+  

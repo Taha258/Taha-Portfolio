@@ -1,17 +1,15 @@
 import Link from "next/link";
+import "@/allStyleFile/navLink.css"
 
 // Define the props type for NavLink
 interface NavLinkProps {
-  href: string;  // Specify href as a string
-  title: string; // Specify title as a string
+  href: string; 
+  title: string; 
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ href, title }) => {
   return (
-    <Link
-      href={href}
-      className="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
-    >
+    <Link href={href} className="nav-link">
       {title}
     </Link>
   );
